@@ -343,18 +343,18 @@ def edit_artist_submission(artist_id):
   form = ArtistForm(request.form)
   artist = Artist.query.get(artist_id)
   
-  artist.name = form.name.data, 
-  artist.city = form.city.data,
-  artist.state = form.state.data,
-  artist.phone = form.phone.data,
-  artist.image_link = form.image_link.data,
-  artist.facebook_link = form.facebook_link.data,
-  artist.genres = form.genres.data,
-  artist.website_link = form.website_link.data,
-  artist.seeking_venue = form.seeking_venue.data,
+  artist.name = form.name.data 
+  artist.city = form.city.data
+  artist.state = form.state.data
+  artist.phone = form.phone.data
+  artist.image_link = form.image_link.data
+  artist.facebook_link = form.facebook_link.data
+  artist.genres = form.genres.data
+  artist.website_link = form.website_link.data
+  artist.seeking_venue = form.seeking_venue.data
   artist.seeking_description = form.seeking_description.data
   
-  db.session.bulk_update_mappings()
+  db.session.commit()
 
   return redirect(url_for('show_artist', artist_id=artist_id))
 
@@ -372,16 +372,16 @@ def edit_venue_submission(venue_id):
   form = VenueForm(request.form)
   venue = Venue.query.get(venue_id)
 
-  venue.name = form.name.data, 
-  venue.city = form.city.data,
-  venue.state = form.state.data,
-  venue.address = form.address.data,
-  venue.phone = form.phone.data,
-  venue.image_link = form.image_link.data,
-  venue.facebook_link = form.facebook_link.data,
-  venue.genres= form.genres.data,
-  venue.website_link = form.website_link.data,
-  venue.seeking_talent = form.seeking_talent.data,
+  venue.name = form.name.data
+  venue.city = form.city.data
+  venue.state = form.state.data
+  venue.address = form.address.data
+  venue.phone = form.phone.data
+  venue.image_link = form.image_link.data
+  venue.facebook_link = form.facebook_link.data
+  venue.genres = form.genres.data
+  venue.website_link = form.website_link.data
+  venue.seeking_talent = form.seeking_talent.data
   venue.seeking_description = form.seeking_description.data
   
   db.session.commit()

@@ -384,6 +384,7 @@ def edit_venue_submission(venue_id):
   venue.seeking_talent = form.seeking_talent.data
   venue.seeking_description = form.seeking_description.data
   
+  
   db.session.commit()
 
   return redirect(url_for('show_venue', venue_id=venue_id))

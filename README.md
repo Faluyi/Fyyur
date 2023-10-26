@@ -1,5 +1,6 @@
 Fyyur
 -----
+![Screenshot (95)](https://github.com/Faluyi/Fyyur/assets/83612442/3f282e15-e428-4723-bed8-249844b1b4b8)
 
 ## Introduction
 
